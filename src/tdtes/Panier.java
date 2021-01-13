@@ -62,9 +62,15 @@ public class Panier {
 		}
 	} 
 	
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
+	
 	@Override 
 	public boolean equals(Object o) {
 		if (o == this) return true;
+		if (o == null) return false;
 		if (o.getClass() != this.getClass()) return false;
 		Panier p = (Panier)o;
 		if (this.tailleLimit != p.tailleLimit) return false;
