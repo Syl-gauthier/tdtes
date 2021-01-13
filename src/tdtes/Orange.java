@@ -19,10 +19,12 @@ public class Orange {
 		this.origine = origine;
 	}
 	
+	@Override
 	public String toString() {
 		return String.format("Orange: %s / %.2f", this.origine, this.prix);
 	}
 	
+	@Override
 	public boolean equals(Object o) {
 		if (o == this) return true;
 		if (o.getClass() != this.getClass()) return false;

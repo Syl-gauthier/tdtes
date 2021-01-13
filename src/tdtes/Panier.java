@@ -42,6 +42,7 @@ public class Panier {
 		return prix;
 	}
 	
+	@Override
 	public String toString() {
 		String str = String.format("Panier (%d):\n", this.tailleLimit);
 		Iterator<Orange> iter = this.listOrange.iterator();
@@ -61,6 +62,7 @@ public class Panier {
 		}
 	} 
 	
+	@Override 
 	public boolean equals(Object o) {
 		if (o == this) return true;
 		if (o.getClass() != this.getClass()) return false;
