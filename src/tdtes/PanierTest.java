@@ -58,8 +58,8 @@ public class PanierTest {
 	}
 	
 	@Test public void testToSting() {
-		String str = "Panier (5):\n";
-		str += "\t" + new Orange(10, "France").toString() + "\n";
+		String str = String.format("Panier (5):%n");
+		str += String.format("\t%s%n", new Orange(10, "France").toString());
 		assertEquals(str, p1.toString());
 	}
 	

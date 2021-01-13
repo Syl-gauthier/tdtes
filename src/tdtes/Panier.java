@@ -10,7 +10,7 @@ public class Panier {
 	
 	public Panier(List<Orange> listOrange, int tailleLimit) {
 		if (listOrange.size() > tailleLimit) throw new RuntimeException("Too many oranges");
-		this.listOrange = new ArrayList<Orange>(listOrange);
+		this.listOrange = new ArrayList<>(listOrange);
 		this.tailleLimit = tailleLimit;
 	}
 	
@@ -19,7 +19,7 @@ public class Panier {
 	}
 	
 	public boolean estVide() {
-		return this.listOrange.size() == 0;
+		return this.listOrange.isEmpty();
 	}
 	
 	public void ajoute(Orange o) {
@@ -44,11 +44,11 @@ public class Panier {
 	
 	@Override
 	public String toString() {
-		String str = String.format("Panier (%d):\n", this.tailleLimit);
+		String str = String.format("Panier (%d):%n", this.tailleLimit);
 		Iterator<Orange> iter = this.listOrange.iterator();
 		while(iter.hasNext()) {
 			Orange o = iter.next();
-			str += "\t" + o.toString() + "\n";
+			str += String.format("\t%s%n", o.toString());
 		}
 		return str;
 	}
