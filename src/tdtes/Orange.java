@@ -20,7 +20,7 @@ public class Orange {
 	}
 	
 	public String toString() {
-		return String.format("Orange: %s / %d", this.origine, this.prix);
+		return String.format("Orange: %s / %.2f", this.origine, this.prix);
 	}
 	
 	public boolean equals(Orange o) {

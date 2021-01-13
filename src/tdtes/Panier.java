@@ -53,9 +53,8 @@ public class Panier {
 	}
 	
 	public void boycotteOrigine(String origine) {
-		Iterator<Orange> iter = this.listOrange.iterator();
-		while(iter.hasNext()) {
-			Orange o = iter.next();
+		for(int i = 0; i<this.listOrange.size(); i++) {
+			Orange o = this.listOrange.get(i);
 			if (o.getOrigine().equals(origine)) {
 				this.listOrange.remove(o);
 			}
