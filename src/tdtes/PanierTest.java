@@ -53,8 +53,8 @@ public class PanierTest {
 	}
 	
 	@Test public void testEquals() {
-		assertTrue(p1.equals(p2));
-		assertFalse(p1.equals(p3));
+		assertEquals(p1, p2);
+		assertNotEquals(p1, p3);
 	}
 	
 	@Test public void testToSting() {
@@ -73,7 +73,7 @@ public class PanierTest {
 	
 	@Test public void testBoycott() {
 		pBoycott.boycotteOrigine("Italie");
-		assertTrue(pBoycott.equals(pBoycottFinal));
+		assertEquals(pBoycott, pBoycottFinal);
 	}
 
 }

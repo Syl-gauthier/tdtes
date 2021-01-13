@@ -17,9 +17,9 @@ public class OrangeTest {
 
 	@Test public void test() {
 		assert(o1.getClass().equals(Orange.class));
-		assertTrue(o1.equals(o2));
-		assertFalse(o1.equals(o3));
-		assertFalse(o1.equals(o4));
+		assertEquals(o1, o2);
+		assertNotEquals(o1, o3);
+		assertNotEquals(o1, o4);
 	}
 	
 	@Test public void testGetters() {
