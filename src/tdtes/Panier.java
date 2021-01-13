@@ -61,7 +61,10 @@ public class Panier {
 		}
 	} 
 	
-	public boolean equals(Panier p) {
+	public boolean equals(Object o) {
+		if (o == this) return true;
+		if (o.getClass() != this.getClass()) return false;
+		Panier p = (Panier)o;
 		if (this.tailleLimit != p.tailleLimit) return false;
 		if (this.listOrange.size() != p.listOrange.size()) return false;
 		for(int i = 0; i<this.listOrange.size(); i++) {

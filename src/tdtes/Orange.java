@@ -23,7 +23,10 @@ public class Orange {
 		return String.format("Orange: %s / %.2f", this.origine, this.prix);
 	}
 	
-	public boolean equals(Orange o) {
-		return this.prix == o.prix && this.origine.equals(o.origine);
+	public boolean equals(Object o) {
+		if (o == this) return true;
+		if (o.getClass() != this.getClass()) return false;
+		Orange orange = (Orange)o;
+		return this.prix == orange.prix && this.origine.equals(orange.origine);
 	}
 }
