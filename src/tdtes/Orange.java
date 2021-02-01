@@ -1,5 +1,5 @@
 package tdtes;
-
+//test
 public class Orange {
 	private double prix;
 	private String origine;
@@ -14,7 +14,7 @@ public class Orange {
 
 	public Orange(double prix, String origine) {
 		super();
-		if (prix < 0 ) throw new ArithmeticException("Prix négatif");
+		if (prix < 0 ) throw new ArithmeticException("Prix nÃ©gatif");
 		this.prix = prix;
 		this.origine = origine;
 	}
